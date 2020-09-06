@@ -16,8 +16,8 @@ namespace DynamicProgramming.Knapsack
                 new Item(10, 5, 11),
                 new Item(7, 3, 10),
                 new Item(9, 15, 12),
-                new Item(10, 2, 3),
-                new Item(10, 4, 8),
+                new Item(11, 2, 3),
+                new Item(12, 4, 8),
             };
 
             var matrixBasedSolver = new KnapsackMatrix();
@@ -40,8 +40,8 @@ namespace DynamicProgramming.Knapsack
                 new Item(10, 5_000_000, 11_000_000),
                 new Item(7, 3_000_000, 10_000_000),
                 new Item(9, 15_000_000, 12_000_000),
-                new Item(10, 2_000_000, 3_000_000),
-                new Item(10, 4_000_000, 8_000_000),
+                new Item(11, 2_000_000, 3_000_000),
+                new Item(12, 4_000_000, 8_000_000),
             };
 
             Console.WriteLine("Large weights:");
