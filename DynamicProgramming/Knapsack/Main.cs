@@ -20,8 +20,8 @@ namespace DynamicProgramming.Knapsack
                 new Item(12, 4, 8),
             };
 
-            var matrixBasedSolver = new KnapsackMatrix();
-            var btreeBasedSolver = new KnapsackBtree();
+            ISolveableKnapsack matrixBasedSolver = new KnapsackMatrix();
+            ISolveableKnapsack btreeBasedSolver = new KnapsackBtree();
 
             var matrixResult = matrixBasedSolver.Solve(maxWeight, items);
             Console.WriteLine("Matrix based solution max profit: " + matrixResult.MaxProfit);
@@ -48,7 +48,8 @@ namespace DynamicProgramming.Knapsack
 
             var bigBtreeResult = btreeBasedSolver.Solve(bigMaxWeight, bigItems);
             Console.WriteLine("B-tree based solution max profit: " + bigBtreeResult.MaxProfit);
-            Console.Write("-Items included: " + string.Join(", ", bigBtreeResult.IncludedIds));
+            Console.WriteLine("-Items included: " + string.Join(", ", bigBtreeResult.IncludedIds));
+            
         }
 
         public class Item : IItem
