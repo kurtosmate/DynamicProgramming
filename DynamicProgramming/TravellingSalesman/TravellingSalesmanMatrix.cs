@@ -4,6 +4,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TravellingSalesman
 {
+    /// <summary>
+    /// Solves Travelling salesman problem with matrix based solution.
+    /// Returns the shortest possible route that visits each vertices exactly once and returns to the origin vertices in a graph
+    /// </summary>
     public class TravellingSalesmanMatrix : ISolveableTravellingSalesman
     {
         private const int marker = int.MaxValue;
